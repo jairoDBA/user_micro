@@ -1,6 +1,8 @@
 package com.user.application.usecase.interactors;
 
 import com.user.application.usecase.port.input.RegisterUserService;
+import org.springframework.stereotype.Component;
 
-public class RegisterUserImpl implements RegisterUserService {
+@Component
+public abstract class RegisterUserImpl implements RegisterUserService {
 }

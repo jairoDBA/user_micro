@@ -1,11 +1,16 @@
 package com.user.infrastructure.entities;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.*;
 
-@Table(name="USER", schema = "USERS")
+@Table(name="USER_TABLE", schema = "USERS")
+@Entity
+@Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class UserEntity {
 
     @Id
