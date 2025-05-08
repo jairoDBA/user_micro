@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/expense")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -25,8 +25,8 @@ public class UserController {
     @PostMapping(produces = "application/json")
     public ResponseEntity<UserResponse> saveExpense(@RequestBody UserRequest userRequest) {
 
-      //  ExpenseResponse expenseSaved = saveExpenseService.saveExpense(expenseRequest);
-            UserResponse userResponse = new UserResponse();
+        UserResponse userResponse = registerUserService.registerUser(userRequest);
+
         return new ResponseEntity<>(userResponse, HttpStatus.CREATED);
     }
     //BORRAR USUARIO
