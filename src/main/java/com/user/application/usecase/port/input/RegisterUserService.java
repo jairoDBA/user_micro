@@ -6,5 +6,5 @@ import com.user.infrastructure.controllers.response.UserResponse;
 @FunctionalInterface
 public interface RegisterUserService {
 
-    UserResponse registerUser(UserRequest user);
+    UserResponse registerUser(UserRequest userRequest);
 }
